@@ -27,3 +27,5 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth')->n
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
 
+Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [UserController::class, 'register'])->name('register');
